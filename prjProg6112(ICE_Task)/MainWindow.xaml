@@ -5,63 +5,57 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:prjProg6112_ICE_Task_"
         
-        Title="MainWindow" Height="726" Width="832">
-    <Window.Background>
-        <ImageBrush ImageSource="/Poker_Main.jpg"/>
-    </Window.Background>
+        Title="MainWindow" Height="762" Width="887" Background="White">
+    <Grid Margin="0,10,0,-80" RenderTransformOrigin="0.49,0.612" HorizontalAlignment="Center" Width="887">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="142*"/>
+            <RowDefinition Height="119*"/>
+        </Grid.RowDefinitions>
+        <Grid.Background>
+            <ImageBrush ImageSource="/lHjb6i.jpg"/>
+        </Grid.Background>
 
 
-
-    <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="41*"/>
             <ColumnDefinition Width="359*"/>
         </Grid.ColumnDefinitions>
-        <TextBox x:Name="txtName" HorizontalAlignment="Left" Margin="350,131,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Height="30" Width="150" Grid.Column="1"/>
-        <TextBox x:Name="txtSurname" HorizontalAlignment="Left" Margin="350,201,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Height="30" Width="150" Grid.Column="1"/>
-        <TextBox x:Name="txtEmail" HorizontalAlignment="Left" Margin="350,262,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Height="30" Width="150" Grid.Column="1"/>
+        <TextBox x:Name="txtName" HorizontalAlignment="Left" Margin="344,270,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Height="35" Width="218" Grid.Column="1"/>
+        <TextBox x:Name="txtSurname" HorizontalAlignment="Left" Margin="344,358,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Height="35" Width="218" Grid.Column="1"/>
+        <TextBox x:Name="txtEmail" HorizontalAlignment="Left" Margin="344,5,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Height="35" Width="218" Grid.Column="1" RenderTransformOrigin="0.789,-6.999" Grid.Row="1"/>
 
-        <Button x:Name="btnSpin" Content="SPIN!" Grid.Column="1" HorizontalAlignment="Left" Margin="210,355,0,0" VerticalAlignment="Top" Height="48" Width="251" Click="btnSpin_Click"/>
+        <Button x:Name="btnStart" Content="FEELING LUCKY?!" HorizontalAlignment="Left" Margin="166,99,0,0" VerticalAlignment="Top" Height="109" Width="345" Foreground="#FFFBFBFB" ClickMode="Release" Background="{x:Null}" Click="btnEnter_Click" Grid.Column="1" Grid.Row="1" FontSize="38">
+            <Button.BorderBrush>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black" Offset="1"/>
+                    <GradientStop Color="#FFC5B192" Offset="0"/>
+                </LinearGradientBrush>
+            </Button.BorderBrush>
+        </Button>
+
         <TextBlock
-        Name="txtBlockHeading"
-        Margin="10,17,97,610" 
-        Width="640" FontSize="40" FontWeight="Bold" Grid.Column="1">
-        WELCOME TO THE MAGIC 8 BALL
+            x:Name="txtBlockHeading"
+            Margin="42,138,-11,222" FontSize="50" FontWeight="Bold" Grid.ColumnSpan="2">
             <TextBlock.Foreground>
-                <SolidColorBrush x:Name="MySolidColorBrush" Color="Maroon" />
-            </TextBlock.Foreground>
-
-            <TextBlock.Triggers>
-                <EventTrigger RoutedEvent="TextBlock.Loaded">
-                    <BeginStoryboard>
-                        <Storyboard>
-                            <ColorAnimation 
-                        Storyboard.TargetName="MySolidColorBrush"
-                        Storyboard.TargetProperty="Color"
-                        From="DarkOrange" To="SteelBlue" Duration="0:0:1"
-                        AutoReverse="True" RepeatBehavior="Forever" />
-                        </Storyboard>
-                    </BeginStoryboard>
-                </EventTrigger>
-            </TextBlock.Triggers>
-        </TextBlock>
+                <SolidColorBrush x:Name="MySolidColorBrush" Color="White" />
+            </TextBlock.Foreground><Run Text="WELCOME TO THE MAGIC 8 BALL"/></TextBlock>
         <TextBlock
             x:Name="txtBlockHeading_Copy"
-            Margin="148,128,477,516" FontSize="30" FontWeight="Bold" Grid.Column="1">
+            Margin="75,265,602,121" FontSize="30" FontWeight="Bold" Grid.Column="1">
             <TextBlock.Foreground>
-                <SolidColorBrush x:Name="MySolidColorBrush1" Color="Maroon" />
+                <SolidColorBrush x:Name="MySolidColorBrush1" Color="White" />
             </TextBlock.Foreground><Run Text="NAME:"/></TextBlock>
         <TextBlock
             x:Name="txtBlockHeading_Copy1"
-            Margin="149,194,411,442" FontSize="30" FontWeight="Bold" Grid.Column="1">
+            Margin="75,355,539,36" FontSize="30" FontWeight="Bold" Grid.Column="1">
             <TextBlock.Foreground>
-                <SolidColorBrush x:Name="MySolidColorBrush2" Color="Maroon" />
+                <SolidColorBrush x:Name="MySolidColorBrush2" Color="White" />
             </TextBlock.Foreground><Run Text="SURNAME:"/></TextBlock>
         <TextBlock
             x:Name="txtBlockHeading_Copy2"
-            Margin="148,258,440,384" FontSize="30" FontWeight="Bold" Grid.Column="1">
+            Margin="75,0,619,321" FontSize="30" FontWeight="Bold" Grid.Column="1" RenderTransformOrigin="0.516,-0.059" Grid.Row="1">
             <TextBlock.Foreground>
-                <SolidColorBrush x:Name="MySolidColorBrush3" Color="Maroon" />
+                <SolidColorBrush x:Name="MySolidColorBrush3" Color="White" />
             </TextBlock.Foreground><Run Text="EMAIL:"/></TextBlock>
     </Grid>
 </Window>

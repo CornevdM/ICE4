@@ -8,12 +8,18 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="Poker_Main.jpg" />
+    <None Remove="EightBallMain.png" />
+    <None Remove="lHjb6i.jpg" />
+    <None Remove="PokerMain.jpg" />
+    <None Remove="Poker_Main_Back.png" />
     <None Remove="Poker_Second.png" />
   </ItemGroup>
 
   <ItemGroup>
-    <Resource Include="Poker_Main.jpg" />
+    <Resource Include="EightBallMain.png" />
+    <Resource Include="lHjb6i.jpg" />
+    <Resource Include="PokerMain.jpg" />
+    <Resource Include="Poker_Main_Back.png" />
     <Resource Include="Poker_Second.png" />
   </ItemGroup>
 

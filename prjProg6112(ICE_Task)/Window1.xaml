@@ -4,12 +4,13 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:prjProg6112_ICE_Task_"
-        Title="Window1" Height="418" Width="626">
-    <Window.Background>
-        <ImageBrush Stretch="None" ImageSource="/Poker_Second.png"/>
-    </Window.Background>
-    <Grid>
-        <Button x:Name="btnEnter" Content="Button" HorizontalAlignment="Left" Margin="105,332,0,0" VerticalAlignment="Top" Height="33" Width="60" Foreground="#FFFBFBFB" ClickMode="Release" Background="{x:Null}" Click="btnEnter_Click">
+        Title="PokerSecond" Height="457" Width="629">
+
+    <Grid Height="447" VerticalAlignment="Top">
+        <Grid.Background>
+            <ImageBrush ImageSource="/Poker_Second.png" Stretch="None"/>
+        </Grid.Background>
+        <Button x:Name="btnEnter" Content="SPIN!" HorizontalAlignment="Left" Margin="105,332,0,0" VerticalAlignment="Top" Height="33" Width="60" Foreground="#FFFBFBFB" ClickMode="Release" Background="{x:Null}" Click="btnEnter_Click">
             <Button.BorderBrush>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="Black" Offset="1"/>
@@ -17,13 +18,16 @@
                 </LinearGradientBrush>
             </Button.BorderBrush>
         </Button>
-        <RichTextBox  x:Name="rchOuput" Foreground="Black" Background="White" Opacity="0" Margin="29,24,381,263" TextChanged="RichTextBox_TextChanged">
-            <FlowDocument>
-                <Paragraph>
-                    <Run Text=""/>
-                </Paragraph>
-            </FlowDocument>
-        </RichTextBox>
+        <TextBox x:Name ="txtUserInput" HorizontalAlignment="Left" Margin="29,201,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Height="25" Width="216"/>
+        <TextBlock x:Name ="lblHeadingSecond" HorizontalAlignment="Left" Margin="64,164,0,0" Text="TYPE IN YOUR QUESTION" TextWrapping="Wrap" VerticalAlignment="Top" Width="146" Foreground="White"></TextBlock>
+        <TextBox x:Name="txtOuput" HorizontalAlignment="Left" Margin="40,39,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="194" Height="98" Foreground="White" BorderBrush="#FFF2D1A6" TextChanged="txtOuput_TextChanged">
+            <TextBox.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF192231"/>
+                    <GradientStop Color="#FF141C29" Offset="1"/>
+                </LinearGradientBrush>
+            </TextBox.Background>
+        </TextBox>
     </Grid>
 </Window>
 

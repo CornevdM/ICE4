@@ -27,17 +27,19 @@ namespace prjProg6112_ICE_Task_
         Read_WriteDetails Main = new Read_WriteDetails();
 
         public string Name, Surname, Email;
-        private void btnSpin_Click(object sender, RoutedEventArgs e)
+
+        private void btnEnter_Click(object sender, RoutedEventArgs e)
         {
             Main.SetName(Name = txtName.Text);
             Main.SetSurName(Name = txtName.Text);
             Main.SetEmail(Name = txtName.Text);
-            Main.SaveToTextFile();
-            
+            //Main.SaveToTextFile();
+
             Window1 Event = new Window1();
             Event.Show();
 
             this.Close();
         }
+
     }
 }

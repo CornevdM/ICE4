@@ -12,13 +12,15 @@ namespace prjProg6112_ICE_Task_
 
         public string PATH = Path.GetFullPath(@"..\..\..\") + "LuckyWinner.txt";
         static List<Details> DetailList = new List<Details>();
-        public void PushToListDetails(string PlayerName, string PlayerSurname, string PlayerEmail)
+        public void PushToListDetails(string PlayerName, string PlayerSurname, string PlayerEmail, string PlayerQuestion, string QuestionAnswer)
         {
             DetailList.Add(new Read_WriteDetails()
             {
                 PlayerName = GetName(),
                 PlayerSurName = GetSurname(),
-                PlayerEmail = GetEmail()
+                PlayerEmail = GetEmail(),
+                PlayerQuestion = GetQuestion(),
+                QuestionAnswer = GetAnswer()
             });
         }
         
@@ -35,6 +37,8 @@ namespace prjProg6112_ICE_Task_
                             SW.WriteLine(PlayerName);
                             SW.WriteLine(PlayerSurName);
                             SW.WriteLine(PlayerEmail);
+                            SW.WriteLine(PlayerQuestion);
+                            SW.WriteLine(QuestionAnswer);
                             SW.Close();//closeing the text file
                         }
                     }
@@ -46,6 +50,8 @@ namespace prjProg6112_ICE_Task_
                         SW.WriteLine(PlayerName);
                         SW.WriteLine(PlayerSurName);
                         SW.WriteLine(PlayerEmail);
+                        SW.WriteLine(PlayerQuestion);
+                        SW.WriteLine(QuestionAnswer);
                         SW.Close();//closeing the text file
                     }
                 }
@@ -66,6 +72,8 @@ namespace prjProg6112_ICE_Task_
                         SW.WriteLine(PlayerName);
                         SW.WriteLine(PlayerSurName);
                         SW.WriteLine(PlayerEmail);
+                        SW.WriteLine(PlayerQuestion);
+                        SW.WriteLine(QuestionAnswer);
                         SW.Close();//closeing the text file
                     }
                 }
@@ -75,11 +83,10 @@ namespace prjProg6112_ICE_Task_
             try
             {
                 StreamReader SR = new StreamReader(PATH, true);
-                foreach (var Value in DetailList)
-                {
-                    SR.ReadToEnd();
+                
+                    strDisplay = SR.ReadToEnd();
                     SR.Close();
-                }
+                
             }
             catch (Exception ex)
             {
@@ -101,6 +108,15 @@ namespace prjProg6112_ICE_Task_
         {
             return PlayerEmail;
         }
+        public string GetQuestion()
+        {
+            return PlayerQuestion;
+        }
+        public string GetAnswer()
+        {
+            return QuestionAnswer;
+        }
+
         public override void SetName(string strPlayerName)
         {
             PlayerName = strPlayerName;
@@ -114,6 +130,16 @@ namespace prjProg6112_ICE_Task_
         public override void SetEmail(string strPlayerEmail)
         {
             PlayerEmail = strPlayerEmail;
+        }
+
+        public override void SetPlayerQuestion(string strPlayerQuestion)
+        {
+            PlayerQuestion = strPlayerQuestion;
+        }
+
+        public override void SetQuestionAnswer(string strQuestionAnswer)
+        {
+            QuestionAnswer = strQuestionAnswer;
         }
         #endregion
     }
