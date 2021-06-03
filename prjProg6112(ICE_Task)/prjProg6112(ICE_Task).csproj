@@ -1,0 +1,20 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <RootNamespace>prjProg6112_ICE_Task_</RootNamespace>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Poker_Main.jpg" />
+    <None Remove="Poker_Second.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Poker_Main.jpg" />
+    <Resource Include="Poker_Second.png" />
+  </ItemGroup>
+
+</Project>
